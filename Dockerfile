@@ -10,7 +10,7 @@ COPY . ./
 RUN npm run build
 
 FROM nginx:1.17-alpine
-ENV PORT=8080
+ENV PORT=80
 RUN apk --no-cache add libintl && \
       apk --no-cache add --virtual .gettext gettext && \
       cp /usr/bin/envsubst /usr/local/bin/: && \
